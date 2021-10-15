@@ -2,6 +2,8 @@
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
 Study the code below and explain in your own words why nested function can access the variable internal. */
 
+// Answer: Because of the way closures work, the outer function can access anything within it. However, the internal function could not access anything externally.
+
 const external = "I'm outside the function";
 
 function myFunction() {
@@ -28,10 +30,14 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
-  }
+function summation(number) {
+    let count = 0;
+    for(let i = 0; i <= number; i++){
+      count = count + i;
+    }
+    return count;
+    }
+  console.log('Task 1:', summation(4));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
